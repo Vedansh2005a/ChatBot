@@ -11,7 +11,7 @@ class ChatState(TypedDict):
   messages:Annotated[list[BaseMessage],add_messages]
 
 
-model=ChatGroq(model="llama-3.1-8b-instant",streaming=True)
+model=ChatGroq(model="openai/gpt-oss-20b",streaming=True)
 def ChatNode(state:ChatState):
  message=state['messages']
 
